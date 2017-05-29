@@ -3,6 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueResource from 'vue-resource'
+
+Vue.use(VueResource);
+
+Vue.http.headers.common['Content-Type'] = 'application/json';
+Vue.http.headers.common['Accept'] = '*/*';
 
 Vue.config.productionTip = false
 
